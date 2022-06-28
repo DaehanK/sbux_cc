@@ -1,21 +1,3 @@
-const searchEle = document.querySelector('.search');
-const searchInputEle = searchEle.querySelector('input');
-
-searchEle.addEventListener('click', function(){
- //LOGIC  
- searchInputEle.focus();
-});
-
-searchInputEle.addEventListener('focus',function(){
-  searchEle.classList.add('focused');
-  searchInputEle.setAttribute('placeholder','통합검색');
-});
-
-searchInputEle.addEventListener('blur',function(){
-  searchEle.classList.remove('focused');
-  searchInputEle.setAttribute('placeholder','');
-});
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
 // window 객체 = 해당 창 == 화면 자체
@@ -167,7 +149,4 @@ spyEls.forEach(function(spyEl){
     .addTo(new ScrollMagic.Controller());
 });
 
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();//올해 년도를 가져옴
 
